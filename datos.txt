@@ -1,0 +1,25 @@
+
+-----------------------------------------------------------------------------
+
+Alumna: Diaz Ramos, Rocio.
+
+Profesor: Santiago GALLINO.
+
+Carrera: Diseño y Desarrollo Web
+
+Comisión: DWT3AH.
+
+Materia: Programacion II.
+
+Año: 2023.
+
+Final
+--
+PHP, CSS con estructura HTML5 semántica
+-----------------------------------------------------------------------------
+
+Información para ingresar al Panel de Administración:
+
+usuario: rocio.diazr@davinci.edu.ar
+
+contraseña: asdasd

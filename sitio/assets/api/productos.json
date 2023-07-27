@@ -1,0 +1,131 @@
+[
+  {
+    "product_id": 1,
+    "name": "Hookeri Variegated",
+    "category": "Baby",
+    "type": "Anthurium",
+    "description": "This is the Anthurium Hookeri Variegata, better known as ‘Birdnest Anthurium’. She is a very special plant with long and narrow leaves. These leaves are bright green and are covered with cream with splashes. The pattern on every leaf will differ, which makes every leaf an art piece of its one. Can you imagine how cool all the leaves look together?! Well, we will tell you a little secret… It looks amazing! :)",
+    "price": "24.45",
+    "img": "hookeri.webp",
+    "img_desc": "Anthurium Hookeri Plant"
+  },
+
+  {
+    "product_id": 2,
+    "name": "Melanochrysum",
+    "category": " ",
+    "type": "Philodendron",
+    "description": "Philodendron Melanochrysum is striking even among the stunning lineup that is the Philodendron family and is sometimes referred to as the Black Gold Philodendron because of the beautiful gold accents on her leaves. Her leaves, which start out like a fleshy pink before turning almost black with age, get bigger and bigger as she gets taller, so you can enjoy them even more! She is a climber so will be happiest when she has something like a mossy stick to climb up. This weird plant blends exotic and refined and will be the centerpiece of any display. Even though it can be very tempting to start your plant collection with this beauty, we would recommend starting with a different plant if you are a beginner plant parent. Also, take note that every plant is unique and not all plants will have the same leaf length as the product images show.",
+    "price": "30.57",
+    "img": "melanochrysum.webp",
+    "img_desc": "Philodendron Melanochrysum Plant"
+  },
+
+  {
+    "product_id": 3,
+    "name": "Verrucosum",
+    "category": " ",
+    "type": "Philodendron",
+    "description": "Philodendron Verrucosum is a rare gem among the Philodendrons, with so many unique characteristics that we could write a book about it! Her beautiful deep green heart-shaped leaves boast bright veins which seem to jump out from their surfaces, while the surprising red colour of their underside and their beautiful downy stems give this living room plant a complexity that demands a spot in centre stage where it can always be looked at.",
+    "price": "21",
+    "img": "verrucosum.webp",
+    "img_desc": "Philodendron Verrucosum Plant"
+  },
+
+  {
+    "product_id": 4,
+    "name": "Pink Princess",
+    "category": " ",
+    "type": "Philodendron",
+    "description": "Isn’t she pretty and cute! The Philodendron Pink Princess baby. She has beautiful dark green leaves, in the shape of arrows, that are decorated with an explosion of pink colour. Even the undersides of her leaves have an amazing red/coppery hue. She really is a living work of art. Luckily she is now also available as baby plant, so with your care and love, she will grow into a bigger and beautiful princess. Try to keep your eyes off her!",
+    "price": "10",
+    "img": "phil.webp",
+    "img_desc": "Philodendron Pink Princess Plant"
+  },
+
+  {
+    "product_id": 5,
+    "name": "Silver Bush",
+    "category": " ",
+    "type": "Anthurium",
+    "description": "Stunning heart shaped green leaves with a silver pattern on top, this is the amazing Anthurium Silver Blush. Juvenile leaves will start with a red or violet tone to them, which eventually fades down in a medium green colour. She is a cousin of the beloved Anthurium Crystallinum, which shows in their family resemblance. The biggest difference is that the Silver blush’s pattern is silver instead of white.",
+    "price": "40",
+    "img": "anthurium.webp",
+    "img_desc": "Anthurium Silver Bush Plant"
+  },
+
+  {
+    "product_id": 6,
+    "name": "Monstera",
+    "category": "Baby",
+    "type": "Adansonii",
+    "description": "The baby Monstera Adansonii, sometimes known as a Swiss cheese plant or a monkey mask, is a natural climber. If you give her a bit of space in your living room you will quickly see roots emerging to try to find things to grab hold of. Offer them a wire or a post to hold on to and in no time your Monstera will be on its way upwards, and will show how happy she is by sprouting big new leaves.",
+    "price": "4",
+    "img": "babymonstera.webp",
+    "img_desc": "Adasonii Monstera Plant"
+  },
+
+  {
+    "product_id": 7,
+    "name": "Caladium Tuber - White Queen",
+    "category": "Baby",
+    "type": "Caladium",
+    "description": "The Caladium is a tropical plant originating from Central and Southern America, particularly Brazil and the Amazon, that grows in the jungle. Caladiums are beautiful plants that grow from bulbs. Their heart-shaped, often brightly colored and beautifully veined leaves make the Caladium a real eyecatcher! The White Queen has stunning white leaves with a pink center that she wears as her crown. This gorgeous plant can be your new royal statement piece!",
+    "price": "5",
+    "img": "caladium.webp",
+    "img_desc": "Caladium White Queen Plant"
+  },
+
+  {
+    "product_id": 8,
+    "name": "Orbifolia",
+    "category": " ",
+    "type": "Calathea",
+    "description": "The Calathea Orbifolia is an impressive lady. She overrules the other Calatheas when it comes to the width of leaves. These oversized green leaves are decorated with pretty silvery strokes. Just like many Calatheas the Orbifolia is also known as ‘The Living Plant’. This means that during the day she is a true show-off as she opens her leaves. When the night falls, she slowly closes them again for a good night of sleep.",
+    "price": "100",
+    "img": "calath.webp",
+    "img_desc": "Calathea Orbifolia Plant"
+  },
+
+  {
+    "product_id": 9,
+    "name": "Medallion",
+    "category": " ",
+    "type": "Calathea",
+    "description": "The Calathea medallion has a memorable appearance with her bold patterned leaves and beautiful deep purple underside. During the day she lets her leaves stand open, but when night falls she closes them up and reveals the deep purple colour on their underside. If you are very quiet you can even hear the gentle rustling as she transforms! The Calathea medallion likes to take up plenty of space, but she doesn’t need a lot of light. As a domestic plant it does well in the darker areas of your living room, the hall or even the bathroom.",
+    "price": "21.82",
+    "img": "calathea.webp",
+    "img_desc": "Medallion Calathea Plant"
+  },
+
+  {
+    "product_id": 10,
+    "name": "Lutescens",
+    "category": " ",
+    "type": "Dypsis",
+    "description": "Are you a Blommar lover that fancies something big and bold? This Dypsis Lutescens is everything you are longing for! This plant consists of multiple ‘palms’ inside one pot, together they form this massive plant! She will definitely brighten up your house with her bright green pinnate leaves. You might have heard about this plant under the name ‘Butterfly Palm’, which we think is a very fitting nickname for this stunner!",
+    "price": "100$USD",
+    "img": "dypsis.webp",
+    "img_desc": "Lutensces Dypsis Plant"
+  },
+  {
+    "product_id": 11,
+    "name": "Verschaffeltii",
+    "category": "Baby",
+    "type": "Fittonia",
+    "description": "Fittonia Verschaffeltii (Fittonia 'Mont Blanc'), is a striking plant by its decorative leaves. The Fittonia is also known as a nerve or mosaic plant. The Fittonia is a tropical houseplant that originally comes from South America. It's an easy plant that needs little care.",
+    "price": "3.50$USD",
+    "img": "fittonia.webp",
+    "img_desc": "Baby Verschaffeltii Fittonia Plant"
+  },
+  {
+    "product_id": 12,
+    "name": "Deliciosa",
+    "category": " ",
+    "type": "Monstera",
+    "description": "The Monstera Deliciosa is a large, popular and lush plant often called a Swiss cheese plant, on account of her leaves which are full of large holes. The Monstera is a strong, powerful vine that grows easily, and in her native South American jungles she grows many meters tall. If long strings grow out of your Monstera Deliciosa, don’t worry- these are aerial roots. In the jungle they are used to cling to trees and branches, but in your home they are not needed so you can cut them off or lead them back to the potting soil.",
+    "price": "100",
+    "img": "monstera.webp",
+    "img_desc": "Deliciosa Monstera Plant"
+  }
+]

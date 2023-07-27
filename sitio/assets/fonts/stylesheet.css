@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url('CaviarDreams.woff2') format('woff2'),
+        url('CaviarDreams.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url('CaviarDreams-Italic.woff2') format('woff2'),
+        url('CaviarDreams-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url('CaviarDreams-BoldItalic.woff2') format('woff2'),
+        url('CaviarDreams-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url('CaviarDreams-Bold.woff2') format('woff2'),
+        url('CaviarDreams-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cocogoose Classic Trial ExBold';
+    src: url('CocogooseClassicTrial-ExtraBold.woff2') format('woff2'),
+        url('CocogooseClassicTrial-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cocogoose Classic Trial';
+    src: url('CocogooseClassicTrial-Medium.woff2') format('woff2'),
+        url('CocogooseClassicTrial-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Boiling Demo';
+    src: url('Boiling-BlackDemo.woff2') format('woff2'),
+        url('Boiling-BlackDemo.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bonky free personal use';
+    src: url('Bonkyfreepersonaluse-Regular.woff2') format('woff2'),
+        url('Bonkyfreepersonaluse-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Notted';
+    src: url('NottedRegular.woff2') format('woff2'),
+        url('NottedRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Harmond';
+    src: url('Harmond-SemiBoldCondensed.woff2') format('woff2'),
+        url('Harmond-SemiBoldCondensed.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Harmond';
+    src: url('Harmond-SemBdItaCond.woff2') format('woff2'),
+        url('Harmond-SemBdItaCond.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Newake Demo';
+    src: url('NewakeDemo.woff2') format('woff2'),
+        url('NewakeDemo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Harmond';
+    src: url('Harmond-ExtraBoldExpanded.woff2') format('woff2'),
+        url('Harmond-ExtraBoldExpanded.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stanley';
+    src: url('Stanley.woff2') format('woff2'),
+        url('Stanley.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lucky Change';
+    src: url('LuckyChange-Regular.woff2') format('woff2'),
+        url('LuckyChange-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kathak-Demo';
+    src: url('Kathak-Demo-Regular.woff2') format('woff2'),
+        url('Kathak-Demo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Veshion';
+    src: url('Veshion.woff2') format('woff2'),
+        url('Veshion.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Veshion';
+    src: url('Veshion.woff2') format('woff2'),
+        url('Veshion.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
