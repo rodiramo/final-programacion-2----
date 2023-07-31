@@ -11,7 +11,8 @@ class DB
 	public const DB_USER = 'root';
 	public const DB_PASS = '';
 	public const DB_NAME = 'dw3_diazramos';
-	
+-
+-
 	private static ?PDO $db = null;
 	/**
 	 * PDO.
@@ -38,4 +39,5 @@ class DB
 			exit;
 		}
 	}
+
 }
