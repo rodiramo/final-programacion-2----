@@ -13,6 +13,7 @@ class DB
 	public const DB_NAME = 'dw3_diazramos';
 -
 -
+-
 	private static ?PDO $db = null;
 	/**
 	 * PDO.
@@ -39,5 +40,4 @@ class DB
 			exit;
 		}
 	}
-
 }
