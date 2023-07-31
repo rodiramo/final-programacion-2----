@@ -77,6 +77,8 @@ h2 {
 img {
   height: auto;
   vertical-align: middle;
+
+width: 100%;
 }
 
 a {
@@ -1035,4 +1037,11 @@ footer {
   h2 {
     font-size: 50px !important;
   }
+}
+
+
+.d-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
