@@ -11,8 +11,6 @@ class DB
 	public const DB_USER = 'root';
 	public const DB_PASS = '';
 	public const DB_NAME = 'dw3_diazramos';
-
-
 	
 	private static ?PDO $db = null;
 	/**
@@ -31,12 +29,12 @@ class DB
 
 	private static function openConection(): PDO
 	{
-		$db_dsn = 'mysql:host=' . self::DB_HOST . ';dbname=' . self::DB_NAME . ';charset=utf8mb4';
+		$db_dsn = 'mysql:host=' . self::DB_HOST . ';port=3310;dbname=' . self::DB_NAME . ';charset=utf8mb4';
 
 		try {
 			return new PDO($db_dsn, self::DB_USER, self::DB_PASS);	
 		} catch (Exception $e) {
-			echo "Error connecting to MySQL";
+			echo "Error connecting to MySQL\n", $e->getMessage(), "\n";
 			exit;
 		}
 	}

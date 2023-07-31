@@ -1036,3 +1036,10 @@ footer {
     font-size: 50px !important;
   }
 }
+
+
+.d-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

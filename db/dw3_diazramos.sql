@@ -193,6 +193,48 @@ INSERT INTO `users` (`user_id`, `rol_fk`, `email`, `password`, `name`, `surname`
 (8, 2, 'helloimuser@user.com', '$2y$10$RqJn5HNqQ5vbwUb7Yq92F.PGEUypote52vOt1GqSJxqcXmzPMxiZW', 'Hello', 'I am User', NULL),
 (9, 2, 'rocio.diazr@davinci.edu', '$2y$10$9q8YKDrxEKmRUEC68pxd1elK.93Ag1/IaW.lxugNA5vrbNQvJxioy', NULL, NULL, NULL);
 
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+
+CREATE TABLE cart_finally(
+cartFinally_id int PRIMARY KEY NOT NULL AUTO_INCREMENT, 
+fecha datetime NOT NULL,
+finally_price decimal(18,2) NOT NULL)
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cartProducts_finally`
+--
+--
+CREATE TABLE cartProducts_finally(
+    cartProductsFinally_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    user_id int NOT NULL,
+    product_id int NOT NULL,
+    cant int NOT NULL,
+    price varchar(50) NOT NULL,
+    cartFinally_id INT NOT NULL
+)
+
+
+CREATE TABLE cart_products
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart_products`
+--
+CREATE TABLE cart (
+    cart_byUser_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    user_id int NOT NULL,
+    product_id int NOT NULL,
+    cant int NOT NULL,
+    price varchar(50) NOT NULL);
+
 --
 -- Indexes for dumped tables
 --

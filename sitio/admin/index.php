@@ -41,6 +41,9 @@ $rutas = [
     'login' => [
         'title' => 'Login'
     ],
+    'purchases' => [
+        'title' => 'Purchases'
+    ]
 ];
 
 $page = $_GET['s'] ?? 'home';

@@ -48,9 +48,6 @@ $product = (new Product)-> viewById($_GET['id']);
                             <i class='bx bx-cart'></i>
                             </button> 
                             <!--hidden-->
-                            <input type="hidden"  name="name" value="<?= $product->getTitle();?>">
-                            <input type="hidden"  name="image" value="<?= $product->getImg();?>">
-                            <input type="hidden"  name="price" value="<?= $product->getPrice();?>">
                             <input type="hidden" name="product_id" value="<?= $product->getProductId(); ?>">
                         </form>
                         </div>

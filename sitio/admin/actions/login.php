@@ -11,7 +11,7 @@ $password = $_POST['password'];
 $auth = new Auth;
 
 if(!$auth->login($email, $password))
-{
+{ 
    $_SESSION['msgError'] = "Error, user or password wrong.";
    $_SESSION['data-form'] = $_POST;
    header("Location: ../index.php?s=login");
