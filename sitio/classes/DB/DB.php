@@ -29,12 +29,12 @@ class DB
 
 	private static function openConection(): PDO
 	{
-		$db_dsn = 'mysql:host=' . self::DB_HOST . ';port=3310;dbname=' . self::DB_NAME . ';charset=utf8mb4';
+		$db_dsn = 'mysql:host=' . self::DB_HOST . ';dbname=' . self::DB_NAME . ';charset=utf8mb4';
 
 		try {
 			return new PDO($db_dsn, self::DB_USER, self::DB_PASS);	
 		} catch (Exception $e) {
-			echo "Error connecting to MySQL\n", $e->getMessage(), "\n";
+			echo "Error connecting to MySQL";
 			exit;
 		}
 	}
