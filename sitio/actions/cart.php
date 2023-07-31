@@ -3,7 +3,7 @@
 
 use Classes\Models\Cart;
 use Classes\Auth\Auth;
-
+use Classes\Models\Product;
 
 require_once __DIR__ . '/../bootstrap/init.php';
 
@@ -12,10 +12,8 @@ $auth = new Auth;
 
 
 
-$id = $_POST['product_id'];
-$name = $_POST['name'];
-$price = $_POST['price'];
-$image = $_POST['image'];
+$product_id = $_POST['product_id'];
+
 
 if(!$auth->authenticated()) {
 	$_SESSION['msgError'] = "You need to be logged in to perform that action";
@@ -25,20 +23,32 @@ if(!$auth->authenticated()) {
 
 
 try {
-	(new Cart)->create([
-		'user_fk' => $auth->getUserId(),
-		'name' => $name,
-		'price' => $price,
-		'image' => $image,
-	]);
 
+	$product = (new Product) ->viewById($product_id);
+	$cart = (new Cart);
+	
+	if($cart->viewById($product_id))
+	{
+		$cart->update($product_id, $product->getPrice());
+	}
+	else
+	{	
+		$cart->create([
+			'user_id' 		=> $auth->getUserId(),
+			'product_id' 	=> $product_id,
+			'price' 		=> $product->getPrice()
+		]);
+	
+	}
+
+	
 	$_SESSION['msgFeedback'] = 'The product was added to the cart!';
 
 	header('Location: ../index.php?s=cart'); 
 	exit;
 } catch (Exception $e) {
 	$_SESSION['data-form'] = $_POST;
-	$_SESSION['msgError'] = "The product couldnt get added to the cart, please try again";
+	$_SESSION['msgError'] = $e->getMessage();
 
 	header('Location: ../index.php?s=products'); 
 

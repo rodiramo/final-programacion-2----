@@ -4,7 +4,6 @@ unset($_SESSION['errors'], $_SESSION['data-form']);
 ?>
 <section class="container">
     <h1 class="mb-1">Enter de Admin Panel!</h1>
-
     <p class="mb-1">Complete with your info to access the panel.</p>
 
     <form action="actions/login.php" method="post">

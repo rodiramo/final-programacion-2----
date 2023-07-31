@@ -23,7 +23,9 @@ $users = (new User)->todo();
 				<td><?= $user->getUserId();?></td>
 				<td><?= $user->getEmail();?></td>
 				<td><?= $user->getRolFk();?></td>
-				<td>Coming Soon</td>
+				<td>
+					<a class="text-white button m-20"
+                                href="index.php?s=purchases&id=<?=$user->getUserId(); ?>"> <i class="bx bx-search"></i></a></td>
 			</tr>
             <?php 
 			endforeach;
