@@ -98,15 +98,15 @@ $product = (new Product) ->viewById($_GET['id']);
         </div>
         <div class="form-fila">
             <p>Current Image</p>
-            <img src="<?= '../imgs/' . $product->getImg();?>" alt="<?= $product->getImgDesc();?>" class="w-25">
+            <img src="<?= '../assets/imgs/' . $product->getImg();?>" alt="<?= $product->getImgDesc();?>" class="w-25">
         </div>
         <div class="form-fila">
-            <label for="img">Image <span class="text-small">(optional)</span></label>
+            <label for="img">Image <p class="text-small">(optional)</p></label>
             <input type="file" id="img" name="img" class="form-control" aria-describedby="help-imagen">
             <div class="form-help" id="help-imagen">If you want to change the image.</div>
         </div>
         <div class="form-fila">
-            <label for="img_desc">Image Description <span class="text-small">(optional)</span></label>
+            <label for="img_desc">Image Description <p class="text-small">(optional)</p></label>
             <input type="text" id="img_desc" name="img_desc" class="form-control"
                 value="<?= $dataForm['img_desc'] ?? $product->getImgDesc();?>">
         </div>

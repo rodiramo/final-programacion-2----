@@ -34,7 +34,7 @@ $products = (new Product)->todo();
                 <td><?= $product->getType();?></td>
                 <td><?= $product->getDescription();?></td>
                 <td><?= $product->getPrice();?>$USD</td>
-                <td><img src="<?= '../imgs/' . $product->getImg();?>" alt="<?= $product->getImgDesc();?>">
+                <td><img src="<?= '../assets/imgs/' . $product->getImg();?>" alt="<?= $product->getImgDesc();?>">
                 </td>
                 <td>
                     <div>

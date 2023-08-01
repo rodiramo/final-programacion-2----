@@ -42,7 +42,10 @@ $routes = [
     'title' => 'Your Profile',
     'requireAuth' => true,
   ],
-
+  'user-purchases' => [
+    'title' => 'Your Purchases',
+    'requireAuth' => true,
+  ],
 ];
 
 

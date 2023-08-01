@@ -2,7 +2,6 @@
 	<h1>Reset Password</h1>
 
 	<form action="actions/update-password.php" method="post">
-		<!-- Agregamos como campos ocultos los valores del token y el email que recibimos como parámetros en el query string. -->
 		<input type="hidden" name="token" value="<?= $_GET['token'];?>">
 		<input type="hidden" name="email" value="<?= $_GET['email'];?>">
 		<div>

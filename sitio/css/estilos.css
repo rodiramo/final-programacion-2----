@@ -52,9 +52,6 @@ span {
   font-size: 2rem;
 }
 
-i .cart-icon{
-  font-size: 2rem !important;
-}
 span:hover {
   color: #f95959;
 }
@@ -144,11 +141,15 @@ ul {
   width: 200px !important;
 }
 /*-- HEADER --*/
+
 header {
   position: relative;
+  display: flex;
   background-image: url(../assets/imgs/banner2.jpg);
   background-size: cover;
   width: 100%;
+  justify-content: space-around;
+  flex-direction: column;
 }
 /* --NAV-- */
 nav {
@@ -173,8 +174,15 @@ nav {
   color: #008470;
   padding-right: 2rem;
 }
+.dropdown-menu li a{
+  color: #002617 !important;
+  font-size: 1.25rem !important;
+}
 .dropdown:hover {
   color: #f95959;
+}
+h2 .total{
+  color: var(--accent);
 }
 /* NAV LINKS*/
 .nav-links {
@@ -195,6 +203,7 @@ nav {
 }
 .nav-links li {
   position: relative;
+  padding: 0.5rem;
 }
 .nav-links li a::before {
   content: "";
@@ -844,7 +853,10 @@ section#formHolder .form .form-peice {
   background-color: var(--msg-success-text);
   color: var(--msg-success-bg);
 }
-
+td{
+  min-width: 150px !important;
+  max-width: 150px !important;
+}
 
 /*--FOOTER--*/
 footer {
@@ -855,7 +867,10 @@ footer {
   z-index: -1;
 }
 /*Table */
-
+table{ 
+  margin: 2rem;
+  width: 90% !important;
+}
 @media only screen and (max-width: 760px),
   (min-device-width: 768px) and (max-device-width: 1024px) {
   

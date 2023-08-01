@@ -24,6 +24,10 @@ $auth = new Auth;
                 <td><?= $auth->getUser()->getName();?></td>
                 <td><?= $auth->getUser()->getSurname();?></td>
                 <td><?= $auth->getUser()->getEmail();?></td>
+                <td>
+					<a class="text-white button m-20"
+                                href="index.php?s=user-purchases&id=<?=$auth->getUser()->getUserId(); ?>"> <i class="bx bx-search"></i></a>
+                </td>
             </tr>
         </tbody>
 </table>

@@ -8,7 +8,7 @@
                     class=" d-flex  align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
                     <span>Blomma.</span>
                 </a>
-                <a href="index.php?s=cart"><i class='cart-icon bx bx-cart'></i></a>
+                <a href="index.php?s=cart"><i class='cart-icon bx bx-cart' style="font-size: 2rem;"></i></a>
             </div>
         </div>
     </div>

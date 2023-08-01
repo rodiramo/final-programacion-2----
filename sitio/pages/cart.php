@@ -18,7 +18,12 @@ $carts = $cartProduct->todo();
             </tr>
         </thead>
  <?php else: ?>
- <h2>Cart is Empty</h2>
+    <div class="container d-flex flex-column">
+ <h2>Your Cart is Empty</h2> 
+ <br>
+ <p>Check out our products and choose your favourites to add to your cart!</p>
+ <img src="assets/imgs/orchid.png" alt="orchid" class="orchid">
+ </div>
  <?php endif; ?>
         <tbody>
             <?php foreach ($carts as $cartProduct): ?>

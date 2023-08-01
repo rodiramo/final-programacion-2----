@@ -172,7 +172,7 @@ unset($_SESSION['msgFeedback'], $_SESSION['msgError']);
     </main>
     <!-- footer-->
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
-            <p class="col-md-4 mb-0 text-white">&copy;The website was made by Rocio Diaz Ramos, who is a student of Web Design and Web Development at Escuela Davinci, her commission is: DWB3TAH, this project is for the final is for the subject of Programming 2, which is taught  by the teacher: Santiago Gallino.</p>
+            <p class="col-md-4 mb-0 text-white">&copy;The website was made by Rocio Diaz Ramos and Tomas Ramirez Cordero, who are students of Web Design and Web Development at Escuela Davinci, this project is for the final is for the subject of Programming 2, which is taught  by the teacher: Santiago Gallino.</p>
 
             <a href="index.php?s=home"
                 class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none">

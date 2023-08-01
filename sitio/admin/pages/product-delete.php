@@ -17,7 +17,7 @@ if(!$product) {
             <p><?= $product->getCategory();?></p>
         </div>
         <picture class="">
-            <img class="w-25" src="../imgs/<?= $product->getImg();?>" alt="<?= $product->getImgDesc();?>">
+            <img class="w-25" src="../assets/imgs/<?= $product->getImg();?>" alt="<?= $product->getImgDesc();?>">
         </picture>
 
         <div><?= $product->getDescription();?></div>

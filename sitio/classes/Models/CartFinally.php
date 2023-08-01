@@ -40,7 +40,7 @@ class CartFinally extends Model
 	}
 
 	
-	public function viewById(int $user_id): ?Cart_Finally
+	public function viewById(int $user_id): ?CartFinally
 {
     $db = (new DB)->getConexion();
     $query = "SELECT * FROM cart_finally CF WHERE CF.user_id = :user_id";
@@ -56,19 +56,20 @@ class CartFinally extends Model
 }
 
 
-   public function getLatestPurchasesForUser(int $user_id)
-    {
-        $db = DB::getConexion();
-        $query = "SELECT c.cartProductsFinally_id,  c.product_id, name, user_id, c.price, img, 'image', cant
-                  FROM cartProducts_finally c
-                  INNER JOIN products p ON c.product_id = p.product_id
-                  WHERE c.user_id = :user_id";
-        $stmt = $db->prepare($query);
-        $stmt->execute(['user_id' => $user_id]);
-        $stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
+public function getLatestPurchasesForUser(int $user_id)
+{
+    $db = DB::getConexion();
+    $query = "SELECT c.cartProductsFinally_id, cf.cartFinally_id, c.product_id, p.name, c.user_id, c.price, p.img, 'image' AS img_desc, c.cant, cf.finally_price
+              FROM cartProducts_finally c
+              INNER JOIN cart_finally cf ON c.cartFinally_id = cf.cartFinally_id
+              INNER JOIN products p ON c.product_id = p.product_id
+              WHERE c.user_id = :user_id";
+    $stmt = $db->prepare($query);
+    $stmt->execute(['user_id' => $user_id]);
+    $stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
 
-        return $stmt->fetchAll();
-    }
+    return $stmt->fetchAll();
+}
 
 
     public function insertCartFinally()

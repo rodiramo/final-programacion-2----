@@ -1,25 +1,32 @@
-<?php
-use Classes\Models\CartFinally;
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+<?php 
 
-$user_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
-$cart = new CartFinally();
-$cartItems = $cart->getLatestPurchasesForUser($user_id);
+use Classes\Models\CartFinally;
+
+$id = $_GET['id'];
+
+$cartFinally = (new CartFinally)->getLatestPurchasesForUser($id);
+
 $auxId = -1;
 $isNewCart = true;
 
 ?>
+<style>
+td{
+    min-width: 150px;
+    max-width: 150px;
+}
+</style>
+
 <section class="container">
 
-    <h1 class="mb-1">User Purchases</h1>
+    <h1 class="mb-1">My Purchases</h1>
     
-     <?php if(empty($cartItems)):?>
-        <div class="mb-1"><p>This user has no purchases 😔</p></div>
+     <?php if(empty($cartFinally)):?>
+        <div class="mb-1"><spam>You have no purchases yet, check out our products!</spam></div>
      <?php else:?>
-         <div class="mb-1"><p>Latest purchases</p></div>
+         <div class="mb-1"><spam>Latest purchases</spam></div>
      <?php endif;?>
-    <?php foreach ($cartItems as $item): ?>
+    <?php foreach ($cartFinally as $item): ?>
 
         <?php
         if($auxId != $item->getCart_byUser_id())
@@ -27,17 +34,11 @@ $isNewCart = true;
             $isNewCart = true;
         }
         ?>
-               <?php 
+            <table class="table">
+        <?php 
             if($isNewCart || $auxId == $item->getCart_byUser_id()):
-        ?>           
-        <?php if($isNewCart):?>                 
-             <h2 class="total">TOTAL: USD$<?=$item->getFinalPrice(); ?></h2>
-             
-             <?php endif; ?>
-     <table class="table">
-          <?php if($isNewCart):?> 
-                    
-                  
+        ?>            
+                <?php if($isNewCart):?>
                     
                     <thead>
                         <tr>
@@ -45,7 +46,10 @@ $isNewCart = true;
                             <th>Price</th>
                             <th>Cant</th>
                         </tr>
-                    </thead>
+
+                      </thead>
+
+                     
                 <?php endif; ?>
             
             <tbody>
@@ -54,15 +58,21 @@ $isNewCart = true;
                     <td><?=$item->getName(); ?></td>
                     <td><?=$item->getPrice(); ?></td>
                     <td><?=$item->getCant(); ?></td>
+                    
             </tr>
-
+        
+            
             <?php endif;?>
-          
+            <?php if($isNewCart):?>
+            <h2 class="total">TOTAL: USD$<?=$item->getFinalPrice(); ?></h2>
+                    
+            <?php endif;?>
             <?php $auxId = $item->getCart_byUser_id();
                   $isNewCart = false; ?>
             
             </tbody> 
-        
+           
             </table>
+    
     <?php endforeach; ?>
 </section>
