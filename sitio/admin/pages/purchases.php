@@ -1,8 +1,12 @@
 <?php
-use Classes\Models\Cart_Finally;
+use Classes\Models\CartFinally;
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-$cart = (new Cart_Finally)->viewById();
+
+$user_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+$cart = new CartFinally();
+$cartItems = $cart->getLatestPurchasesForUser($user_id);
+
 ?>
 
 <section class="container">
@@ -13,17 +17,19 @@ $cart = (new Cart_Finally)->viewById();
             <tr>
                 <th>Title</th>
                 <th>Price</th>
-                <th>Cant</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th>Date</th>
             </tr>
         </thead>
         <tbody>
-        <?php foreach ($cart as $item): ?>
-    <?php echo "<pre>"; print_r($item); echo "</pre>"; ?>
-            <tr>
-                <td><?=$item->getTitle(); ?></td>
-                <td><?=$item->getPrice(); ?></td>
-            </tr>
-        <?php endforeach; ?>
-        </tbody> 
+            <?php foreach ($cartItems as $cartItem): ?>
+                <tr>
+                    <td><?= $cartItem->getName(); ?></td>                    
+                    <td><?= $cartItem->getPrice(); ?></td>
+                    <td><?= $cartItem->getCant(); ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
     </table>
 </section>

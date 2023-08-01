@@ -8,21 +8,24 @@ use Exception;
 
 
 
-class Cart_Finally extends Model
-{
+class CartFinally extends Model
+{  
+	 protected string $table = 'cart_finally';
+ 
 	private int $cartProductsFinally_id;
-    private int $cartFinally_id;
 	private int $product_id;
 	private int $user_id;
 	private string $name;
 	private string $price;
 	private string $img;
 	private int $cant;
-    private string $fecha;
-    private string $finally_price;
-
-
-
+	protected int $cartFinally_id = 0;
+    protected string $fecha = '';
+    protected float $finally_price = 0.0;
+	public function getCartFinallyId(): int
+    {
+        return $this->cartFinally_id;
+    }
 	public function uploadDataArray(array $row)
 	{
 		//$this->cartFinally_id = $row['cartFinally_id'];
@@ -36,13 +39,15 @@ class Cart_Finally extends Model
         $this->finally_price= $row['finally_price'];
 	}
 
-	public function viewById(): ?Cart_Finally
+	
+	public function viewById(int $user_id): ?Cart_Finally
 {
     $db = (new DB)->getConexion();
-    $query = "SELECT * FROM cart_finally CF";
+    $query = "SELECT * FROM cart_finally CF WHERE CF.user_id = :user_id";
     $stmt = $db->prepare($query);
+    $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
     $stmt->execute();
-	$stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
+    $stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
     $cart = $stmt->fetch();
 
     if (!$cart) return null;
@@ -51,6 +56,19 @@ class Cart_Finally extends Model
 }
 
 
+   public function getLatestPurchasesForUser(int $user_id)
+    {
+        $db = DB::getConexion();
+        $query = "SELECT c.cartProductsFinally_id,  c.product_id, name, user_id, c.price, img, 'image', cant
+                  FROM cartProducts_finally c
+                  INNER JOIN products p ON c.product_id = p.product_id
+                  WHERE c.user_id = :user_id";
+        $stmt = $db->prepare($query);
+        $stmt->execute(['user_id' => $user_id]);
+        $stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
+
+        return $stmt->fetchAll();
+    }
 
 
     public function insertCartFinally()

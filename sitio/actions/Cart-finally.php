@@ -1,11 +1,11 @@
 <?php 
 
-use Classes\Models\Cart_Finally;
+use Classes\Models\CartFinally;
 
 require_once __DIR__ . '/../bootstrap/init.php';
 
 try {
-	(new Cart_Finally) -> insertCartFinally();
+	(new CartFinally) -> insertCartFinally();
 
 	$_SESSION['msgFeedback'] = "Thanks for your Purschase! Enjoy it.";
 	header("Location: ../index.php?s=cart");

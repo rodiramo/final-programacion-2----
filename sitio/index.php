@@ -46,27 +46,6 @@ $routes = [
 ];
 
 
-if (!isset($_SESSION['cart'])) {
-  $_SESSION['cart'] = [
-    print_r($_SESSION['cart'])
-  ];
-}
-
-if(isset($_POST['addToCart'])){
-print_r($_POST['product_id']);
-
-if(isset($_SESSION['cart'])){
- print_r($_SESSION['cart']);
-} else{
-    $item_array = array(
-        'product_id' => $_POST['product_id'],
-    );
-
-    $_SESSION['cart'][0] = $item_array;
-    print_r($_SESSION['cart']);
-};
-
-};
 $page = $_GET['s'] ?? 'home';
 
 if (!file_exists("pages/" . $page . ".php")) {
