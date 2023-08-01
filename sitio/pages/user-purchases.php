@@ -10,12 +10,6 @@ $auxId = -1;
 $isNewCart = true;
 
 ?>
-<style>
-td{
-    min-width: 150px;
-    max-width: 150px;
-}
-</style>
 
 <section class="container">
 

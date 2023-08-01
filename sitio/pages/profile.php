@@ -7,7 +7,7 @@ $auth = new Auth;
 
 
 
-<section>
+<section class="container">
 <h1>My Profile</h1>
 
 <table class="table">
