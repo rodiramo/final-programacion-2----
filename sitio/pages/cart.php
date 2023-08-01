@@ -7,6 +7,7 @@ $carts = $cartProduct->todo();
 <h1>Cart</h1>
 
 <table class="table">
+<?php if(!empty($carts)): ?>
         <thead>
             <tr>
                 <th></th>
@@ -16,6 +17,9 @@ $carts = $cartProduct->todo();
                 <th>Delete item</th>
             </tr>
         </thead>
+ <?php else: ?>
+ <h2>Cart is Empty</h2>
+ <?php endif; ?>
         <tbody>
             <?php foreach ($carts as $cartProduct): ?>
             <tr>     
@@ -24,7 +28,7 @@ $carts = $cartProduct->todo();
                 <td><?=$cartProduct->getPrice();?></td>
                 <td><?=$cartProduct->getCant();?></td>
                 <td>
-                <form action="actions/Cart-delete.php" method="post">
+                <form action="actions/cart-delete.php" method="post">
                     <input type="hidden" name="cart_byUser_id" value="<?php echo $cartProduct->getCart_byUser_id()?>">
                     <button style="border: none; background: transparent">
 
@@ -40,9 +44,12 @@ $carts = $cartProduct->todo();
 </table>
 
 <div class="d-flex">
-    <form action="actions/Cart-finally.php" method="post">
-        <button style="background-color: #b84d1c;" class="btn btn-lg">
-            <em class="text-white">Buy</em>
+    <form action="actions/cart-finally.php" method="post">
+        <?php if(!empty($carts)): ?>
+        <button style="background-color: #5ED831;" class="btn btn-lg">
+            <em class="text-white">Finish the Purchase!</em>
         </button>
+     <?php endif; ?>
+
     </form>
 </div>

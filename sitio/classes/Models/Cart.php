@@ -18,6 +18,16 @@ class Cart extends Model
 	private string $image;
 	private int $cant;
 
+	public function uploadDataArray(array $row)
+	{
+		$this->cart_byUser_id = $row['cart_byUser_id'];
+		$this->product_id	= $row['product_id'];
+		$this->name 		= $row['name'];
+		$this->user_id 		= $row['user_id'];
+		$this->price 		= $row['price'];
+		$this->image 		= $row['image'];
+		$this->cant			= $row['cant'];
+	}
 
 	/**
 	 * 
@@ -45,17 +55,7 @@ class Cart extends Model
 	}
 
 
-	public function uploadDataArray(array $row)
-	{
-		$this->cart_byUser_id = $row['cart_byUser_id'];
-		$this->product_id	= $row['product_id'];
-		$this->name 		= $row['name'];
-		$this->user_id 		= $row['user_id'];
-		$this->price 		= $row['price'];
-		$this->image 		= $row['image'];
-		$this->cant			= $row['cant'];
-	}
-
+	
 	/**
 	 * 
 	 * @return Cart[]

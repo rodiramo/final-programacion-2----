@@ -10,7 +10,7 @@ $users = (new User)->todo();
 			<tr>
 				<th>ID</th>
 				<th>Email</th>
-				<th>Rol</th>
+				<th>Role</th>
 				<th>Purchases</th>
 			</tr>
 		</thead>

@@ -143,8 +143,7 @@ INSERT INTO `products_have_families` (`product_fk`, `family_fk`) VALUES
 
 CREATE TABLE `reset_passwords` (
   `user_id` int(10) UNSIGNED NOT NULL,
-  `token` char(64) NOT NULL,
-  `fecha_expiracion` datetime NOT NULL
+  `token` char(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------

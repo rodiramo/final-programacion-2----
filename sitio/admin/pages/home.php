@@ -1,7 +1,7 @@
 <section class="container panel">
     <h1>Panel</h1>
     <div class="d-flex align-items-center flex-column w-100 align-content-center">
-        <img src="../imgs/orchid.png" alt="orchid" class="orchid">
+        <img src="../assets/imgs/orchid.png" alt="orchid" class="orchid">
         <p>Here you can Edit the Products for Blomma.</p>
     </div>
     <div class="row">

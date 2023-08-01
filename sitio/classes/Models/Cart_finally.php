@@ -2,11 +2,15 @@
 
 namespace Classes\Models;
 
-use PDO, Classes\DB\DB, Exception;
+use PDO;
+use Classes\DB\DB;
+use Exception;
 
 
-class Cart_Finally
+
+class Cart_Finally extends Model
 {
+	private int $cartProductsFinally_id;
     private int $cartFinally_id;
 	private int $product_id;
 	private int $user_id;
@@ -18,46 +22,36 @@ class Cart_Finally
     private string $finally_price;
 
 
-	/**
-	 * 
-	 * @param int $cartFinally_id
-	 * 
-	 * @return Cart_Finally|null
-	 * 
-	 */
-
-	public function viewById(int $id): ?Cart_Finally
-	{
-
-		$db = (new DB)->getConexion();
-		$query = "SELECT P.name, P.img, CF.fecha, CF.finally_price, CP.cant, CP.price, CF.cartFinally_id, CP.user_id, P.product_id FROM cart_finally CF
-        INNER JOIN cartproducts_finally CP ON CF.cartFinally_id = CP.cartFinally_id
-        INNER JOIN products P ON P.product_id = CP.product_id
-           WHERE CP.user_id = ?";
-		$stmt = $db->prepare($query);
-		$stmt->execute([$id]);
-		$stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
-
-		$cart = $stmt->fetch();
-
-		if (!$cart) return null;
-
-		return $cart;
-	}
-
 
 	public function uploadDataArray(array $row)
 	{
-		$this->cartFinally_id = $row['cartFinally_id'];
-		$this->product_id	= $row['product_id'];
-		$this->name 		= $row['name'];
-		$this->user_id 		= $row['user_id'];
-		$this->price 		= $row['price'];
-		$this->img 		    = $row['img'];
-		$this->cant			= $row['cant'];
+		//$this->cartFinally_id = $row['cartFinally_id'];
+        //$this->product_id    = $row['product_id'];
+        //$this->name         = $row['name'];
+        //$this->user_id         = $row['user_id'];
+        //$this->price         = $row['price'];
+        //$this->img             = $row['img'];
+        //$this->cant            = $row['cant'];
         $this->fecha        = $row['fecha'];
         $this->finally_price= $row['finally_price'];
 	}
+
+	public function viewById(): ?Cart_Finally
+{
+    $db = (new DB)->getConexion();
+    $query = "SELECT * FROM cart_finally CF";
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+	$stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
+    $cart = $stmt->fetch();
+
+    if (!$cart) return null;
+
+    return $cart;
+}
+
+
+
 
     public function insertCartFinally()
     {   $db = (new DB)->getConexion();
@@ -110,6 +104,18 @@ class Cart_Finally
  
 
 	/********* SETTERS & GETTERS *********/
+
+	public function getcartProductsFinally_id(): int
+	{
+		return $this->cartProductsFinally_id;
+	}
+
+	public function getProductsFinally_id(int $cartProductsFinally_id)
+	{
+		$this->cartProductsFinally_id = $cartProductsFinally_id;
+	}
+
+
 	public function getCart_byUser_id(): int
 	{
 		return $this->cartFinally_id;
