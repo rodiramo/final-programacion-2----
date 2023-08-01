@@ -31,3 +31,4 @@ $auth = new Auth;
             </tr>
         </tbody>
 </table>
+</section>

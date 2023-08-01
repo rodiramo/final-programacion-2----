@@ -16,9 +16,9 @@ $isNewCart = true;
     <h1 class="mb-1">My Purchases</h1>
     
      <?php if(empty($cartFinally)):?>
-        <div class="mb-1"><spam>You have no purchases yet, check out our products!</spam></div>
+        <div class="mb-1"><p>You have no purchases yet, check out our products!</p></div>
      <?php else:?>
-         <div class="mb-1"><spam>Latest purchases</spam></div>
+         <div class="mb-1"><p>Latest purchases</p></div>
      <?php endif;?>
     <?php foreach ($cartFinally as $item): ?>
 
@@ -28,6 +28,10 @@ $isNewCart = true;
             $isNewCart = true;
         }
         ?>
+            <?php if($isNewCart):?>
+            <h2 class="total">TOTAL: USD$<?=$item->getFinalPrice(); ?></h2>
+                    
+            <?php endif;?>
             <table class="table">
         <?php 
             if($isNewCart || $auxId == $item->getCart_byUser_id()):
@@ -57,10 +61,7 @@ $isNewCart = true;
         
             
             <?php endif;?>
-            <?php if($isNewCart):?>
-            <h2 class="total">TOTAL: USD$<?=$item->getFinalPrice(); ?></h2>
-                    
-            <?php endif;?>
+        
             <?php $auxId = $item->getCart_byUser_id();
                   $isNewCart = false; ?>
             

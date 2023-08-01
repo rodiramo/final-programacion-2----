@@ -1,11 +1,11 @@
 
 -----------------------------------------------------------------------------
 
-Alumna: Diaz Ramos, Rocio.
+Alumnos: Diaz Ramos, Rocio y Ramirez Cordero, Tomas Agustin Nicolas.
 
 Profesor: Santiago GALLINO.
 
-Carrera: Diseño y Desarrollo Web
+Carrera: Diseño y Desarrollo Web.
 
 Comisión: DWT3AH.
 
@@ -20,6 +20,7 @@ PHP, CSS con estructura HTML5 semántica
 
 Información para ingresar al Panel de Administración:
 
-usuario: rocio.diazr@davinci.edu.ar
-
+usuarios admins: 
+                rocio.diazr@davinci.edu.ar 
+                tomas.ramirez@davinci.edu.ar
 contraseña: asdasd
